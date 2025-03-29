@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 11px; 
+    background-color: #292929;
+}
+h1 {
+    color: #2f4f4e; 
+    font-size: 40px; 
+    font-family: Georgia, serif;
+    text-align: center;
+}
+h2 {
+    color: #3f8f8c;
+    font-size: 30px; 
+    font-family: Georgia, serif;
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+p {
+    font-size: 15px;
+    text-align: center;
+    margin: 10px 0;
+}
+.h3-huzey { color: rgb(28, 28, 28); }
+.h3-burhan { color: rgb(105, 105, 105); }
+.h3-bedirhan { color: rgb(255, 215, 0); }
+.h3-purple { color: purple; }
