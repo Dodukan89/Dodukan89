@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 11px; 
+    background-color: #292929;
+}
+h1 {
+    color: #2f4f4e; 
+    font-size: 40px; 
+    font-family: Georgia, serif;
+    text-align: center;
+}
+p {
+    font-size: 15px;
+    text-align: center;
+    margin: 10px 0;
+}
+a {
+    color: #1ec7c1;
+    text-decoration: none;
+    margin: 10px 0;
+    text-align: center;
+}
+.a-1 {
+    color: rgb(226, 211, 211);
+}
+.a-2 {
+    color: rgb(225, 255, 53);
+}
+.a-3 {
+    color: rgb(163, 25, 133);
+}
+li {
+    font-size: 15px;
+    text-align: center;
+    margin: 10px 0;
+}
+.li-1 {
+    color: rgb(95, 35, 95);
+}
+.li-2 {
+    color: rgb(135, 108, 233);
+}
+.resimler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+h3 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.h2-1 {
+    color: rgb(226, 211, 211);
+}
+.p-1 {
+    color: rgb(199, 199, 199);
+}
+.h2-2 {
+    color: rgb(225, 255, 53);
+}
+.h3-1 {
+    color: rgb(163, 25, 133);
+}
+.p-2 {
+    color: rgb(95, 35, 95);
+}
+.h3-2 {
+    color: rgb(88, 52, 216);
+}
+.p-3 {
+    color: rgb(135, 108, 233);
+}
+.h3-3 {
+    color: rgb(151, 101, 35);
+}
+.p-4 {
+    color: rgb(255, 169, 39);
+}
+.li-3 {
+    color: rgb(255, 169, 39);
+}
+.h3-4 {
+    color:rgb(82, 65, 65)
+}
+.p-5 {
+    color:rgb(148, 115, 115)
+}
+.li-4 {
+    color:rgb(148, 115, 115)
+}
+.h3-5 {
+    color:rgb(52, 75, 15)
+}
+.p-6 {
+    color:rgb(98, 133, 42)
+}
+.li-5 {
+    color:rgb(98, 133, 42)
+}
+.h2-3 {
+    color:rgb(163, 25, 133)
+}
+.p-7 {
+    color:rgb(139, 77, 126)
+}
+.h3-6 {
+    color:#120a38
+}
+.p-8 {
+    color:#362d61
+}
+.li-6 {
+    color:#362d61
+}
+.h3-7 {
+    color:rgb(104, 121, 136)
+}
+.p-9 {
+    color:rgb(157, 196, 230)
+}
+.li-7 {
+    color:rgb(157, 196, 230)
+}
+.h3-8 {
+    color:#35410d
+}
+.p-10 {
+    color:#8eaf23
+}
+.li-8 {
+    color:#8eaf23
+}
+.h3-9 {
+    color:#023868
+}
+.p-11 {
+    color:#007ae6
+}
+.li-9 {
+    color:#007ae6
+}
+@keyframes color-change {
+    0% {
+      color: rgb(255, 0, 0);
+    }
+    10% {
+        color: rgb(28,28,28);
+    }
+    50% {
+        color:rgb(88, 52, 216)
+    }
+    90% {
+      color: rgb(0, 255, 242);
+    }
+  
+    100% {
+      color: rgb(30, 255, 0);
+    }
+}
+
+h1:hover {
+    animation: color-change 9s infinite;
+
+}
+a {
+    animation: color-change 8s infinite;
+    animation-range: 100;
+}

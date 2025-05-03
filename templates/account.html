@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/wd.css">
+    <title>Sayfanız</title>
+</head>
+<body>
+
+    <!-- Profil Başlık Alanı -->
+    <header class="profile-header">
+      <form action="{{ url_for('upload_profile_pic') }}" method="POST" enctype="multipart/form-data">
+        <!-- Profil Fotoğrafı -->
+        <label for="profile-pic-upload">
+          <img class="profile-pic"
+               src="{{ url_for('static', filename='profile_pics/' + current_user.profile_pic) if current_user.profile_pic else url_for('static', filename='img/default_avatar.png') }}"
+               alt="Profil Fotoğrafı">
+        </label>
+        <!-- Gizli Dosya Yükleyici -->
+        <input type="file" id="profile-pic-upload" name="profile_pic" accept="image/*" style="display: none;" onchange="this.form.submit()">
+      </form>
+  
+      <!-- Kullanıcı Bilgileri -->
+      <div class="profile-info">
+        <h2 class="profile-name">{{ current_user.name or "İsimsiz Kullanıcı" }}</h2>
+        <p class="profile-email">{{ current_user.email }}</p>
+      </div>
+    </header>
+  
+
+  
+    <!-- Profil Bilgileri -->
+    <main class="profile-main">
+      <h2>Profil Bilgileri</h2>
+      <ul class="profile-info-list">
+        <li><strong>Kullanıcı Adı:</strong> {{ current_user.username }}</li>
+        <li><strong>E-posta:</strong> {{ current_user.email }}</li>
+
+      </ul>
+    </main>
+  
+</body>
+</html>
