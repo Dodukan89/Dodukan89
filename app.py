@@ -15,7 +15,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app )
 login_manager = LoginManager()
 login_manager.init_app(app)
-app.secret_key = "İloveNiggers<3"
+
 
 login_manager.login_view = 'login'
 
@@ -122,7 +122,7 @@ def home01():
 @app.route('/ultrakill')
 def home02():
     
-    return render_template("ultrakill.html")
+    return render_template("index.html")
 
 @app.route('/sifre-kontrol', methods=['GET', 'POST'])
 def sifre01():
@@ -284,22 +284,22 @@ def sifre02():
 
 @app.route('/Nurihemdem-Devleti')
 def yetkili_sayfa():
-    return render_template("yetki2.html")
+    return render_template("index.html")
 
 @app.route('/XD')
 def fazladan_bir_sayfa():
-    return render_template('yetki1.html')
+    return render_template('index.html')
 
 # Çevre dostu musun?
 @app.route('/Çevre-farkındalığı')
 def index2():
-    return render_template('İndex2.html')
+    return render_template('index.html')
 
 #Cihazlar
 @app.route('/<size>')
 def lights(size):
     return render_template(
-                            'Işıklar.html', 
+                            'index.html', 
                             size=size
                            )
 
@@ -307,7 +307,7 @@ def lights(size):
 @app.route('/<size>/<lights>')
 def electronics(size, lights):
     return render_template(
-                            'Cihazlar.html',
+                            'index.html',
                             size = size, 
                             lights = lights                           
                            )
@@ -322,7 +322,7 @@ def end(size, lights, device):
 
         result = result_calculate(size, lights, device)
 
-        return render_template('end.html', result=result)
+        return render_template('index', result=result)
     except ValueError:
         return "Hata: Geçersiz giriş! Lütfen sayı girin.", 400
     except Exception as e:
@@ -331,7 +331,7 @@ def end(size, lights, device):
 #Form sayfası
 @app.route('/form')
 def form():
-    return render_template('form.html')
+    return render_template('index.html')
 
 #Form alındı!
 @app.route('/submit', methods=['POST'])
@@ -346,7 +346,7 @@ def submit_form():
         f.write(f"Name: {name}, Email: {email}, Address: {address}, Date: {date}\n")
 
     # Verilerinizi kaydedebilir veya e-posta ile gönderebilirsiniz
-    return render_template('form_result.html', 
+    return render_template('index.html', 
                            # Değişkenleri buraya yerleştirin
                            name=name,
                            email=email,
