@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Portföy</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#home">HOME</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#about">ABOUT</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#skills">MY SKILLS</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Önizleme bölümü -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">Dodukan89</h1>
+        <p class="home__subtitle">WEB-DEVELOPER, PYTHON PROGRAMMER</p>
+      </section>
+      <!-- Hakkımda bölümü -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">Hakkımda</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            Merhaba ben Dodukan89. Python ve web geliştirme konularında kendimi geliştiriyorum.
+            Genel olarak şuana kadar yaptığım herşeyde olan karanlık tema Psikolojik veya Analog korku oyunlarındaki temalardan esinlenildi.
+            Diğer şeylerse kendi miim kültürüm ile alakalıdır.
+          </p>
+          <img
+            class="info-block__img"
+            src="../static/img/profile.jpg"
+            alt="me"
+            width="250"
+            height="250"
+          />
+        </div>
+      </section>
+      <!-- Beceriler bölümü -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="skills__title">Becerilerim</h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/python.png"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Python</span>
+              <input class="skill__button" type="submit" name="button_python" value="Proje önizlemesini göster.">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/discord.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Discord</span>
+              <input class="skill__button" type="submit" name="button_discord"  value="Görebilceğin bişey daha yok">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/html.png"
+                alt="html"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Html</span>
+              <input class="skill__button" type="submit" name="button_html" value="Proje önizlemesini göster.">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/db.webp"
+                alt="SQL"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Veri tabanı</span>
+              <input class="skill__button" type="submit" name="button_db" value="Proje önizlemesini göster.">
+            </li>
+          </ul>
+        </form>
+        <!-- Python Projesi -->
+        {% if button_python%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/python-project.png" alt="project" width="500">
+              <a class="project__link" href="">GitHub'da görüntüle</a>
+          </div>
+        {% endif %}
+        <!-- Html Projesi -->
+        {% if button_html%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/htmlprojesi.png" alt="project" width="500">
+              <a class="project__link" href="https://github.com/Dodukan89/Dodukan89">Github'da görüntüle</a>
+          </div>
+        {% endif %}
+        <!-- Veri tabanı projesi -->
+        {% if button_db %}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="/static/img/dbprojesi.png" alt="project" width="500">
+              <a class="project__link" href="">Github'da görüntüle</a>
+          </div>
+        {% endif %}
+        <!-- Discord projesi -->
+        {% if button_discord %}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/discord-project.png" alt="project" width="500">
+              <a class="project__link" href="">Github'da görüntüle</a>
+          </div>
+        {% endif %}
+
+      </section>
+      <!-- Geri bildirim formu -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">Geri bildirim</h2>
+        <form action="" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="E-Postanız" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Geri bildiriminizi yazın."></textarea>
+          </label>
+          <button class="form__button" type="submit">Gönder</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer__info">
+        <a href="
+        <p class="footer__text">2023</p>
+      </div>
+      <div class="footer__socials">
+        <a href="
+
+    </footer>
+  </body>
+</html>
